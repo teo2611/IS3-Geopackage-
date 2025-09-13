@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geopackage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="dashboard-header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold d-flex align-items-center">
+                    <img src="../imagenes/logo.png" alt="Logo" height="80" class="me-2">
+                    <span class="fw-bold text-white" style="font-size: 45px;">GeoPackage</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../main.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Análisis y Requisitos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="introduccion.html">Introducción</a></li>
+                            <li><a class="dropdown-item" href="justificacion.html">Justificación Proyecto</a></li>
+                            <li><a class="dropdown-item" href="problema.html">Definición del Problema</a></li>
+                            <li><a class="dropdown-item" href="objetivos.html">Objetivo General y Específicos</a></li>
+                            <li><a class="dropdown-item" href="alcance.html">Alcance del Sistema</a></li>
+                            <li><a class="dropdown-item" href="requisitos.html">Requisitos</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Modelado y Diseño
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Casos de Uso</a></li>
+                            <li><a class="dropdown-item" href="#">Diagramas UML</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Calidad, Pruebas y Gestión
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../calidadpruebas/estandares.html">Estándares y Modelos de Calidad de Software</a></li>
+                            <li><a class="dropdown-item" href="#">Gestión de Proyecto</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item" style="padding-right: 30px;">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5 bg-white p-4 rounded shadow-sm">
+        <h1 class="text-center mb-4">Requisitos</h1>
+
+        <h2 class="text-primary">Requisitos de Usuario</h2>
+        &nbsp;
+        <p>
+            La siguiente tabla muestra los requisitos de usuario para el proyecto propuesto. Estos requisitos están
+            relacionados directamente con las necesidades del cliente en cuanto a la automatización de un conjunto de
+            datos, lo cual luego se traduce en los requisitos del sistema. Cada requisito describe las acciones que el
+            usuario puede realizar en el sistema. A medida que se desarrolla el proyecto, cada herramienta aplicada
+            ayuda a evolucionar y aclarar aún más las necesidades del cliente, facilitando su integración en otros
+            procesos del sistema (Metaute, 2015).
+        </p>
+        &nbsp;
+        <table class="table table-bordered table-hover table-striped align-middle">
+        <thead class="table-dark text-center">
+            <tr>
+            <th>ID Requisito</th>
+            <th>Nombre del Requisito</th>
+            <th>Descripción del Requisito</th>
+            <th>Usuario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>RU-001</td>
+            <td>Gestión de Cliente</td>
+            <td>El sistema permitirá la gestión de los registros de los clientes para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+            <td>Repartidor, Proveedor, Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-002</td>
+            <td>Gestión de Registro de Entregas</td>
+            <td>El sistema permitirá la gestión de los registros de las entregas para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+            <td>Usuario, Repartidor, Proveedor, Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-003</td>
+            <td>Gestión de monitoreo</td>
+            <td>El sistema permitirá la gestión de los registros de los monitoreos para Crear, Modificar, Inhabilitar, Consultar, Cancelar y Salir</td>
+            <td>Usuario, Repartidor, Proveedor, Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-004</td>
+            <td>Gestión de Paquetes</td>
+            <td>Administrar los detalles de los paquetes, como dimensiones, peso y estado de fragilidad, para cada entrega.</td>
+            <td>Administrador, Repartidor, Proveedor</td>
+            </tr>
+            <tr>
+            <td>RU-005</td>
+            <td>Gestión de Pago</td>
+            <td>El sistema permitirá la gestión y control de los pagos relacionados con las entregas, incluyendo la creación, modificación y consulta de pagos</td>
+            <td>Administrador, Cliente, Proveedor</td>
+            </tr>
+            <tr>
+            <td>RU-006</td>
+            <td>Gestión de Tipo Pago</td>
+            <td>El sistema permitirá la gestión y control del tipo de pago relacionados con las entregas, incluyendo la creación, modificación y consulta del tipo de pago</td>
+            <td>Administrador, Cliente, Proveedor</td>
+            </tr>
+            <tr>
+            <td>RU-007</td>
+            <td>Gestión de Registro de Despacho</td>
+            <td>El sistema permitirá la gestión y control de los despachos relacionados con las entregas, incluyendo la creación, modificación y consulta de lugar de despacho del paquete</td>
+            <td>Administrador, Cliente, Repartidor, Proveedor</td>
+            </tr>
+            <tr>
+            <td>RU-008</td>
+            <td>Gestión de Repartidor</td>
+            <td>El sistema permitirá la gestión y control del repartidor que se encargará de las entregas, incluyendo la creación, modificación y consulta de los mismos</td>
+            <td>Administrador, Proveedor, Cliente</td>
+            </tr>
+            <tr>
+            <td>RU-009</td>
+            <td>Gestión de Proveedor</td>
+            <td>El sistema permitirá la gestión y control del Proveedor que se encargará de la entrega del paquete, incluyendo la creación, modificación y consulta de los mismos</td>
+            <td>Administrador, Repartidor, Cliente</td>
+            </tr>
+            <tr>
+            <td>RU-010</td>
+            <td>Gestión de Empleado</td>
+            <td>El sistema permitirá la gestión y control de los trabajadores de la sede, incluyendo la creación, modificación y consulta de los mismos</td>
+            <td>Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-011</td>
+            <td>Gestión de Tipo Empleado</td>
+            <td>El sistema permitirá la gestión y control de los tipos de trabajadores de la sede, incluyendo la creación, modificación y consulta de los mismos</td>
+            <td>Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-012</td>
+            <td>Gestión de Informe</td>
+            <td>El sistema permitirá la Ejecución de los Informes (Paquetes mensuales, Tiempos de entrega, Repartidores)</td>
+            <td>Repartidor, Proveedor</td>
+            </tr>
+            <tr>
+            <td>RU-013</td>
+            <td>Gestión de Consultas</td>
+            <td>El sistema permitirá la ejecución de las Consultas (Tipos de paquetes, Ubicación repartidor, Distancia)</td>
+            <td>Repartidor, Proveedor</td>
+            </tr>
+            <tr>
+            <td>RU-014</td>
+            <td>Gestión Perfil</td>
+            <td>El sistema permitirá la gestión de la información del perfil para Crear, Modificar, Inhabilitar, Consultar, Cancelar, Salir</td>
+            <td>Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-015</td>
+            <td>Gestión Usuario</td>
+            <td>El sistema permitirá la gestión de la información de los usuarios para Crear, Modificar, Inhabilitar, Consultar, Cancelar, Salir</td>
+            <td>Administrador</td>
+            </tr>
+            <tr>
+            <td>RU-016</td>
+            <td>Gestión Ciudad</td>
+            <td>El sistema permitirá la gestión y control de las ciudades, incluyendo la creación, modificación y consulta de la ciudad de origen y destino</td>
+            <td>Administrador, Proveedor, Repartidor, Cliente</td>
+            </tr>
+            <tr>
+            <td>RU-017</td>
+            <td>Gestión Tipo Paquete</td>
+            <td>El sistema permitirá la gestión y control de los tipos de paquetes, incluyendo la creación, modificación y consulta.</td>
+            <td>Administrador, Proveedor, Repartidor, Cliente</td>
+            </tr>
+            <tr>
+            <td>RU-018</td>
+            <td>Gestión Sede Empresa</td>
+            <td>El sistema permitirá la gestión y control de las sedes de las cuales el paquete sea despachado, incluyendo la creación, modificación y consulta.</td>
+            <td>Administrador, Proveedor, Repartidor, Cliente</td>
+            </tr>
+        </tbody>
+        </table>
+        &nbsp;
+
+        <h2 class="text-primary">Requisitos Funcionales</h2>
+        <p>
+            La siguiente tabla muestra los requisitos de usuario, entendidos como los servicios específicos que el
+            sistema debe ofrecer al usuario final. Cada requisito funcional describe de manera detallada las acciones
+            que cada actor llevará a cabo en el sistema, lo que permite visualizar el rol que desempeñará cada uno una
+            vez que el software esté en funcionamiento en el equipo del cliente o usuario (Metaute, 2015).
+        </p>
+
+        <p><strong>RF-001 – Crear Cliente</strong>
+        Permite registrar un cliente en el sistema con datos como Código, Nombre, Teléfono, Correo y Dirección.
+        <strong>Actores: Proveedor, Administrador</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-002 – Consultar Cliente</strong>
+        Permite buscar un cliente registrado en el sistema por ID o nombre.
+        <strong>Actores: Repartidor, Proveedor, Admin.</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-003 – Guardar Cliente</strong>
+        Almacena la información del cliente tras su registro o actualización.
+        <strong>Actores: Proveedor, Administrador</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-004 – Modificar Cliente</strong>
+        Actualiza la información de un cliente existente, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Repartidor, Proveedor, Admin.</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-005 – Inhabilitar Cliente</strong>
+        Desactiva temporalmente un cliente en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Proveedor, Administrador</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-006 – Cancelar Cliente</strong>
+        Cancela la operación actual de registro o modificación de un cliente.
+        <strong>Actores: Proveedor, Administrador</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-007 – Salir de Gestión de Clientes</strong>
+        Finaliza el uso del módulo de clientes y regresa al menú principal.
+        <strong>Actores: Proveedor, Administrador</strong>
+        <strong>Id RU Asociado: RU-001</strong></p>
+
+        <p><strong>RF-008 – Crear Registro de Entrega</strong>
+        Registra una nueva entrega con datos como: Fecha, Hora, Código de Paquete y Ubicación Final.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-009 – Consultar Registro de Entrega</strong>
+        Permite buscar entregas existentes por estado, fecha o ID.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-010 – Guardar Registro de Entrega</strong>
+        Almacena los datos de la entrega tras su creación o actualización.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-011 – Modificar Registro de Entrega</strong>
+        Actualiza los detalles de una entrega registrada, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-012 – Inhabilitar Registro de Entrega</strong>
+        Marca una entrega como inactiva o cancelada en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-013 – Cancelar Registro de Entrega</strong>
+        Cancela la operación actual de entrega y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-014 – Salir de Gestión de Entregas</strong>
+        Finaliza el uso del módulo de entregas y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-002</strong></p>
+
+        <p><strong>RF-015 – Crear Monitoreo</strong>
+        Registra la información de seguimiento en tiempo real para una entrega específica: Ubicación actual, Estado, Hora de actualización, Nombre del destinatario, Dirección del destinatario, Contacto del destinatario, Transportista asignado.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-016 – Consultar Monitoreo</strong>
+        Proporciona acceso al estado de monitoreo en tiempo real de cualquier entrega: Ubicación actual, Estado, Hora de actualización, Nombre del destinatario, Dirección del destinatario, Contacto del destinatario, Transportista asignado.
+        <strong>Actores: Administrador, Repartidor, Cliente</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-017 – Guardar Monitoreo</strong>
+        Almacena los datos del monitoreo tras su creación o actualización.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-018 – Modificar Monitoreo</strong>
+        Actualiza la información del monitoreo en tiempo real, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-019 – Inhabilitar Monitoreo</strong>
+        Desactiva el monitoreo en tiempo real para una entrega específica. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-020 – Cancelar Monitoreo</strong>
+        Cancela la operación actual en el módulo de monitoreo y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-021 – Salir de Gestión de Monitoreo</strong>
+        Finaliza el uso del módulo de monitoreo y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-003</strong></p>
+
+        <p><strong>RF-022 – Crear Paquete</strong>
+        Registra un nuevo paquete con datos como: Marca, Código, Peso, Dimensiones y Estado de Fragilidad.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-023 – Consultar Paquete</strong>
+        Permite buscar paquetes por ID o características específicas.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-024 – Guardar Paquete</strong>
+        Almacena los datos de un paquete tras su registro o actualización.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-025 – Modificar Paquete</strong>
+        Actualiza los datos de un paquete registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-026 – Inhabilitar Paquete</strong>
+        Marca un paquete como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-027 – Cancelar Paquete</strong>
+        Cancela la operación actual en el módulo de paquetes y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-028 – Salir de Gestión de Paquetes</strong>
+        Finaliza el uso del módulo de paquetes y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-004</strong></p>
+
+        <p><strong>RF-029 – Crear Pago</strong>
+        Registra un nuevo pago indicando el método utilizado: monto y detalles del cliente.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-030 – Consultar Pago</strong>
+        Permite buscar un pago registrado por ID, Fecha o Monto.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-031 – Guardar Pago</strong>
+        Almacena los datos del pago tras su registro o actualización.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-032 – Modificar Pago</strong>
+        Actualiza los detalles de un pago registrado, como el monto o el método utilizado. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-033 – Inhabilitar Pago</strong>
+        Marca un pago como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-034 – Cancelar Pago</strong>
+        Cancela la operación actual en el módulo de pagos y regresa al menú principal.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-035 – Salir de Gestión de Pagos</strong>
+        Finaliza el uso del módulo de pagos y regresa al menú principal.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-005</strong></p>
+
+        <p><strong>RF-036 – Crear Tipo de Pago</strong>
+        Permite registrar un nuevo tipo de pago disponible en el sistema: Descripción, Estado (activo/inactivo).
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-037 – Consultar Tipo de Pago</strong>
+        Proporciona información sobre los métodos de pago registrados en el sistema: pago, Nombre del tipo de pago, Descripción, Estado.
+        <strong>Actores: Administrador, Cliente, Proveedor</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-038 – Guardar Tipo de Pago</strong>
+        Almacena los datos de un tipo de pago tras su registro o actualización.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-039 – Modificar Tipo de Pago</strong>
+        Actualiza los detalles de un tipo de pago registrado. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-040 – Inhabilitar Tipo de Pago</strong>
+        Marca un tipo de pago como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-041 – Cancelar Tipo de Pago</strong>
+        Cancela la operación actual en el módulo de tipos de pago y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-042 – Salir de Gestión de Tipos de Pago</strong>
+        Finaliza el uso del módulo de tipos de pago y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-006</strong></p>
+
+        <p><strong>RF-043 – Crear Registro de Despacho</strong>
+        Permite registrar un despacho en el sistema con datos como: lugar, fecha y hora.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-044 – Consultar Registro de Despacho</strong>
+        Permite buscar registros de despacho por ID o fecha.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-045 – Guardar Registro de Despacho</strong>
+        Almacena los datos de un despacho tras su registro o actualización.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-046 – Modificar Registro de Despacho</strong>
+        Actualiza los detalles de un despacho registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-047 – Inhabilitar Registro de Despacho</strong>
+        Marca un despacho como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-048 – Cancelar Registro de Despacho</strong>
+        Cancela la operación actual en el módulo de despachos y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-049 – Salir de Gestión de Despachos</strong>
+        Finaliza el uso del módulo de despachos y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-007</strong></p>
+
+        <p><strong>RF-050 – Crear Repartidor</strong>
+        Permite registrar un repartidor con los datos: Nombre, ID, Correo y Teléfono.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-051 – Consultar Repartidor</strong>
+        Proporciona información sobre repartidores y entregas asignadas.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-052 – Guardar Repartidor</strong>
+        Almacena los datos del repartidor tras su registro o actualización.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-053 – Modificar Repartidor</strong>
+        Actualiza los datos de un repartidor registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-054 – Inhabilitar Repartidor</strong>
+        Marca un repartidor como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-055 – Cancelar Repartidor</strong>
+        Cancela la operación actual en el módulo de repartidores y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-056 – Salir de Gestión de Repartidores</strong>
+        Finaliza el uso del módulo de repartidores y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-008</strong></p>
+
+        <p><strong>RF-057 – Crear Proveedor</strong>
+        Permite registrar un proveedor con los datos: Nombre, ID, Correo y Teléfono.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-058 – Consultar Proveedor</strong>
+        Permite buscar proveedores registrados por: ID o nombre.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-059 – Guardar Proveedor</strong>
+        Almacena los datos del proveedor tras su registro o actualización.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-060 – Modificar Proveedor</strong>
+        Actualiza los datos de un proveedor registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-061 – Inhabilitar Proveedor</strong>
+        Marca un proveedor como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-062 – Cancelar Proveedor</strong>
+        Cancela la operación actual en el módulo de proveedores y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-063 – Salir de Gestión de Proveedores</strong>
+        Finaliza el uso del módulo de proveedores y regresa al menú principal.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-009</strong></p>
+
+        <p><strong>RF-064 – Crear Empleado</strong>
+        Permite registrar un empleado con los datos: Nombre, ID, Correo, Teléfono y Rol.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-065 – Consultar Empleado</strong>
+        Permite buscar empleados registrados en el sistema por ID o Rol.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-066 – Guardar Empleado</strong>
+        Almacena los datos de un empleado tras su registro o actualización.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-067 – Modificar Empleado</strong>
+        Actualiza los datos de un empleado registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-068 – Inhabilitar Empleado</strong>
+        Marca un empleado como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-069 – Cancelar Empleado</strong>
+        Cancela la operación actual en el módulo de empleados y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-070 – Salir de Gestión de Empleados</strong>
+        Finaliza el uso del módulo de empleados y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-010</strong></p>
+
+        <p><strong>RF-071 – Generar Informe de Paquetes Mensuales</strong>
+        Genera un informe detallado de los paquetes procesados mensualmente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-012</strong></p>
+
+        <p><strong>RF-072 – Generar Informe de Tiempos de Entrega</strong>
+        Crea un informe que muestra el tiempo promedio y la puntualidad de las entregas realizadas.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-012</strong></p>
+
+        <p><strong>RF-073 – Generar Informe de Repartidores</strong>
+        Produce un informe sobre el rendimiento de los repartidores, incluyendo entregas realizadas y puntualidad.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-012</strong></p>
+
+        <p><strong>RF-074 – Consultar Tipo de Paquete</strong>
+        Permite buscar información sobre los tipos de paquetes registrados en el sistema (frágil, estándar, grande).
+        <strong>Actores: Administrador, Proveedor, Repartidor</strong>
+        <strong>Id RU Asociado: RU-013</strong></p>
+
+        <p><strong>RF-075 – Consultar Ubicación del Repartidor</strong>
+        Muestra la ubicación en tiempo real del repartidor asignado a una entrega específica.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-013</strong></p>
+
+        <p><strong>RF-076 – Consultar Distancia del Repartidor</strong>
+        Calcula y muestra la distancia del repartidor respecto al punto de entrega o cliente.
+        <strong>Actores: Administrador, Repartidor</strong>
+        <strong>Id RU Asociado: RU-013</strong></p>
+
+        <p><strong>RF-077 – Crear Tipo de Empleado</strong>
+        Permite registrar un nuevo tipo de empleado con datos como: ID y Función.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-078 – Consultar Tipo de Empleado</strong>
+        Permite buscar tipos de empleados registrados en el sistema por: id, rol.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-079 – Guardar Tipo de Empleado</strong>
+        Almacena los datos de un tipo de empleado tras su registro o actualización.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-080 – Modificar Tipo de Empleado</strong>
+        Actualiza los datos de un tipo de empleado registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-081 – Inhabilitar Tipo de Empleado</strong>
+        Marca un tipo de empleado como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-082 – Cancelar Tipo de Empleado</strong>
+        Cancela la operación actual en el módulo de tipos de empleados y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-083 – Salir de Gestión de Tipos de Empleado</strong>
+        Finaliza el uso del módulo de tipos de empleados y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-011</strong></p>
+
+        <p><strong>RF-084 – Crear Perfil</strong>
+        Permite registrar un nuevo perfil de usuario con datos como: Nombre, Rol y Permisos específicos.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-085 – Consultar Perfil</strong>
+        Permite buscar perfiles de usuario registrados en el sistema por : ID, Nombre o Rol.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-086 – Guardar Perfil</strong>
+        Almacena los datos de un perfil tras su creación o actualización.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-087 – Modificar Perfil</strong>
+        Actualiza los datos de un perfil registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-088 – Inhabilitar Perfil</strong>
+        Marca un perfil de usuario como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-089 – Cancelar Perfil</strong>
+        Cancela la operación actual en el módulo de perfiles y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-090 – Salir de Gestión de Perfiles</strong>
+        Finaliza el uso del módulo de perfiles y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-014</strong></p>
+
+        <p><strong>RF-091 – Crear Usuario</strong>
+        Registra un nuevo usuario en el sistema con datos como: Nombre, Correo Electrónico y Contraseña.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-092 – Consultar Usuario</strong>
+        Permite buscar usuarios registrados en el sistema por Nombre o ID.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-093 – Guardar Usuario</strong>
+        Almacena la información de un usuario tras su registro o actualización.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-094 – Modificar Usuario</strong>
+        Actualiza los datos de un usuario registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-095 – Inhabilitar Usuario</strong>
+        Desactiva temporalmente a un usuario registrado en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-096 – Cancelar Usuario</strong>
+        Cancela la operación actual en el módulo de usuarios y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-097 – Salir de Gestión de Usuarios</strong>
+        Finaliza el uso del módulo de usuarios y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-015</strong></p>
+
+        <p><strong>RF-098 – Crear Ciudad</strong>
+        Permite registrar una ciudad con datos como: ID Ciudad de Origen y ID Ciudad de Destino.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-099 – Consultar Ciudad</strong>
+        Permite buscar información sobre ciudades registradas en el sistema por ID o Nombre.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-100 – Guardar Ciudad</strong>
+        Almacena la información de una ciudad tras su registro o actualización.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-101 – Modificar Ciudad</strong>
+        Actualiza los datos de una ciudad registrada, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-102 – Inhabilitar Ciudad</strong>
+        Marca una ciudad registrada como inactiva en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-103 – Cancelar Ciudad</strong>
+        Cancela la operación actual en el módulo de ciudades y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-104 – Salir de Gestión de Ciudad</strong>
+        Finaliza el uso del módulo de ciudades y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-016</strong></p>
+
+        <p><strong>RF-105 – Crear Tipo de Paquete</strong>
+        Permite registrar un nuevo tipo de paquete con datos como: ID, Dimensiones y Estado de Fragilidad.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-106 – Consultar Tipo de Paquete</strong>
+        Permite buscar tipos de paquetes registrados en el sistema por ID o código de paquete.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-107 – Guardar Tipo de Paquete</strong>
+        Almacena los datos de un tipo de paquete tras su registro o actualización.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-108 – Modificar Tipo de Paquete</strong>
+        Actualiza los datos de un tipo de paquete registrado, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-109 – Inhabilitar Tipo de Paquete</strong>
+        Marca un tipo de paquete registrado como inactivo en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-110 – Cancelar Tipo de Paquete</strong>
+        Cancela la operación actual en el módulo de tipos de paquete y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-111 – Salir de Gestión de Tipos de Paquete</strong>
+        Finaliza el uso del módulo de tipos de paquete y regresa al menú principal.
+        <strong>Actores: Administrador, Proveedor</strong>
+        <strong>Id RU Asociado: RU-017</strong></p>
+
+        <p><strong>RF-112 – Crear Sede Empresa</strong>
+        Registra una nueva sede con datos como: Dirección, ID y responsable.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+        <p><strong>RF-113 – Consultar Sede Empresa</strong>
+        Permite buscar sedes registradas en el sistema por ID o Dirección, Nombre.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+        <p><strong>RF-114 – Guardar Sede Empresa</strong>
+        Almacena los datos de una sede tras su registro o actualización.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+        <p><strong>RF-115 – Modificar Sede Empresa</strong>
+        Actualiza los datos de una sede registrada, excepto el campo clave. Excepto el campo clave de un cliente existente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+        <p><strong>RF-116 – Inhabilitar Sede Empresa</strong>
+        Marca una sede registrada como inactiva en el sistema. Con previa confirmación del borrado y que no exista información dependiente.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+        <p><strong>RF-117 – Cancelar Sede Empresa</strong>
+        Cancela la operación actual en el módulo de sedes y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+        <p><strong>RF-118 – Salir de Gestión de Sedes Empresa</strong>
+        Finaliza el uso del módulo de sedes y regresa al menú principal.
+        <strong>Actores: Administrador</strong>
+        <strong>Id RU Asociado: RU-018</strong></p>
+
+
+        <h2 class="text-primary">Requisitos No Funcionales (RNF)</h2>
+        &nbsp;
+        <p>
+            El requisito no funcional se refiere a aspectos del sistema que no son solicitados directamente por el
+            cliente, pero que están relacionados con lo que el sistema debe incluir o cumplir. Los RNF están vinculados
+            a características externas relacionadas con la calidad (Metaute, 2015).
+        </p>
+        &nbsp;
+        <table class="table table-bordered table-hover table-striped align-middle">
+        <thead class="table-dark text-center">
+            <tr>
+            <th>ID</th>
+            <th>Requisito</th>
+            <th>Descripción del Requisito</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>RNF-001</td>
+            <td>Publicidad</td>
+            <td>Antes de intensificar el uso del sistema, los usuarios deben conocer su modo de uso.</td>
+            </tr>
+            <tr>
+            <td>RNF-002</td>
+            <td>Actualización de personal</td>
+            <td>Actualizar la información por ingreso o retiro de algún trabajador en tiempo real.</td>
+            </tr>
+            <tr>
+            <td>RNF-003</td>
+            <td>Diseño intuitivo</td>
+            <td>La aplicación debe ser intuitiva y sencilla, con una interfaz atrayente, elementos organizados y tiempos de carga rápidos.</td>
+            </tr>
+            <tr>
+            <td>RNF-004</td>
+            <td>Disponibilidad</td>
+            <td>El sistema debe estar disponible las 24 horas del día, todos los días del año.</td>
+            </tr>
+            <tr>
+            <td>RNF-005</td>
+            <td>Actualización permanente</td>
+            <td>La base de datos debe reflejar cualquier cambio de información en tiempo real.</td>
+            </tr>
+            <tr>
+            <td>RNF-006</td>
+            <td>Tiempo de respuesta</td>
+            <td>Reducir el tiempo de respuesta a un promedio máximo de 8 segundos para solicitudes en tiempo real.</td>
+            </tr>
+            <tr>
+            <td>RNF-007</td>
+            <td>Capacidad de almacenamiento</td>
+            <td>La base de datos debe soportar grandes cantidades de información de manera eficiente.</td>
+            </tr>
+            <tr>
+            <td>RNF-008</td>
+            <td>Configuración de hardware</td>
+            <td>El equipo debe estar configurado para soportar la instalación y operación fluida de la aplicación.</td>
+            </tr>
+            <tr>
+            <td>RNF-009</td>
+            <td>Lenguaje de programación</td>
+            <td>El sistema será desarrollado utilizando Python.</td>
+            </tr>
+            <tr>
+            <td>RNF-010</td>
+            <td>Licenciamiento</td>
+            <td>Se requiere licenciamiento adecuado para la implementación del software.</td>
+            </tr>
+            <tr>
+            <td>RNF-011</td>
+            <td>Encriptación</td>
+            <td>Las contraseñas y datos sensibles deben almacenarse encriptados mediante algoritmos seguros.</td>
+            </tr>
+            <tr>
+            <td>RNF-012</td>
+            <td>Copias de seguridad</td>
+            <td>Realizar backups periódicos para garantizar la protección de los datos.</td>
+            </tr>
+            <tr>
+            <td>RNF-013</td>
+            <td>Auditorías</td>
+            <td>Todas las operaciones sensibles deben ser auditadas y registradas en logs de acceso restringido.</td>
+            </tr>
+            <tr>
+            <td>RNF-014</td>
+            <td>Capacitación</td>
+            <td>Brindar formación inicial a los usuarios para garantizar un manejo eficiente del sistema.</td>
+            </tr>
+            <tr>
+            <td>RNF-015</td>
+            <td>Manuales</td>
+            <td>Proveer manuales detallados de usuario y administrador.</td>
+            </tr>
+            <tr>
+            <td>RNF-016</td>
+            <td>Plataforma</td>
+            <td>El sistema será accesible desde computadoras de escritorio y dispositivos móviles.</td>
+            </tr>
+            <tr>
+            <td>RNF-017</td>
+            <td>Paleta de colores</td>
+            <td>Colores principales: gris oscuro, azul claro y blanco; fuente: Arial tamaño 11, color negro.</td>
+            </tr>
+            <tr>
+            <td>RNF-018</td>
+            <td>Acceso</td>
+            <td>Acceso al software vía web con conexión segura y estable.</td>
+            </tr>
+            <tr>
+            <td>RNF-019</td>
+            <td>Compatibilidad</td>
+            <td>Comunicación fluida entre la interfaz de usuario y el sistema backend.</td>
+            </tr>
+        </tbody>
+        </table>
+        &nbsp;
+
+        <h2 class="text-primary">Historias de Usuario</h2>
+        &nbsp;
+        <p>
+            Las historias de usuario son explicaciones o descripciones de las funcionalidades que un usuario requiere en
+            el software, utiliza el formato Como (se refiere al tipo de usuario), Quiero (la tarea que quiere que haga
+            dicho usuario), Para que pueda (Objetivo de la historia), se centran en cómo le aporta al usuario, se ven
+            desde el punto de vista de el mismo. Las historias sirven como ayuda a los desarrolladores y a su equipo
+            para entender las funciones que necesita el programa dependiendo de que tipo de usuario lo está usando sin
+            especificar detalles técnicos, la idea es que estas historias sean claras y alcanzables con sus respectivos
+            criterios de aceptación, también ayudan a mantener el enfoque del programa y de sus requerimientos reales.
+        </p>
+        &nbsp;
+        <table class="table table-bordered table-hover table-striped align-middle">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>#</th>
+            <th>Como...</th>
+            <th>Quiero...</th>
+            <th>Para que...</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Usuario</td>
+            <td>Registrar una cuenta</td>
+            <td>Pueda acceder a la aplicación y realizar pedidos</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Usuario</td>
+            <td>Ver la ubicación de mi pedido en tiempo real</td>
+            <td>Pueda saber el estado de mi entrega</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Usuario</td>
+            <td>Calificar al repartidor</td>
+            <td>Pueda dar retroalimentación sobre el servicio</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Usuario</td>
+            <td>Recibir notificaciones del estado de mi pedido</td>
+            <td>Pueda estar informado sobre su progreso</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Usuario</td>
+            <td>Contactar al repartidor</td>
+            <td>Pueda coordinar la entrega si es necesario</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Repartidor</td>
+            <td>Ver una lista de pedidos disponibles</td>
+            <td>Pueda aceptar entregas según mi disponibilidad</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Repartidor</td>
+            <td>Recibir notificaciones cuando se me asigne un pedido</td>
+            <td>Pueda prepararme para la entrega</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Repartidor</td>
+            <td>Ver la ruta óptima para la entrega</td>
+            <td>Pueda llegar más rápido al destino</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Repartidor</td>
+            <td>Marcar un pedido como entregado</td>
+            <td>Pueda finalizar la entrega correctamente</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td>Repartidor</td>
+            <td>Ver mi historial de entregas</td>
+            <td>Pueda llevar un control de mis pedidos completados</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Proveedor</td>
+            <td>Registrar mis productos y precios en la app</td>
+            <td>Los usuarios puedan comprarlos</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Proveedor</td>
+            <td>Ver los pedidos en curso de mis productos</td>
+            <td>Pueda gestionar el stock y tiempos de entrega</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Proveedor</td>
+            <td>Recibir reportes de ventas</td>
+            <td>Pueda analizar mi desempeño y mejorar mis estrategias</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Proveedor</td>
+            <td>Actualizar el estado de mis productos</td>
+            <td>Los usuarios tengan información actualizada de disponibilidad</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Proveedor</td>
+            <td>Administrar los métodos de pago aceptados</td>
+            <td>Los clientes puedan pagar de manera conveniente</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Administrador</td>
+            <td>Administrar los usuarios registrados</td>
+            <td>Pueda asegurar un uso adecuado de la app</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Administrador</td>
+            <td>Monitorear en tiempo real las entregas</td>
+            <td>Pueda garantizar la eficiencia del servicio</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Administrador</td>
+            <td>Mostrar reportes de desempeño de repartidores</td>
+            <td>Pueda evaluar su rendimiento y mejorar el servicio</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Administrador</td>
+            <td>Recibir alertas de incidencias en entregas</td>
+            <td>Pueda tomar acciones rápidas ante problemas</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td>Administrador</td>
+            <td>Administrar las tarifas de entrega</td>
+            <td>Pueda ajustar precios según la demanda y costos operativos</td>
+          </tr>
+        </tbody>
+      </table>
+        &nbsp;
+        <h2 class="text-primary">Reglas de Negocio</h2>
+        &nbsp;
+        <p>
+            Las reglas de negocio son la ley para los usuarios en un sistema, son como una lista de pautas para que todo
+            marche bien. Es un conjunto de reglas para mantener el orden y evitar problemas. Si una empresa de envíos
+            prohíbe paquetes de más de 50 kg eso simplifica su trabajo. Hay reglas para verificar la dirección antes del
+            envío, evitando entregas perdidas. Estas reglas no son caprichosas existen por razones prácticas. Algunas
+            son muy precisas, como verificar ubicaciones con GPS, otras son más flexibles, como entregas en zonas
+            rurales sin GPS. Su objetivo es hacer el sistema más eficaz y fiable, para la empresa y sus clientes.
+        </p>
+        &nbsp;
+        <table class="table table-bordered table-hover table-striped align-middle">
+        <thead class="table-dark text-center">
+          <tr>
+            <th>Identificar</th>
+            <th>Nombre de la Regla</th>
+            <th>Descripción</th>
+            <th>Ámbito</th>
+            <th>Condiciones</th>
+            <th>Acciones o Restricciones</th>
+            <th>Excepciones</th>
+            <th>Fuente</th>
+            <th>Prioridad</th>
+            <th>Fecha de Creación y Última Actualización</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RN-001</td>
+            <td>Validación de dirección de entrega</td>
+            <td>La dirección de entrega debe ser validada antes de registrar un pedido</td>
+            <td>Registro de pedidos</td>
+            <td>Se debe ingresar una dirección válida y verificable</td>
+            <td>Validación con servicio de geolocalización</td>
+            <td>Direcciones rurales sin GPS requieren referencias adicionales</td>
+            <td>Política de entregas</td>
+            <td>Alta</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-002</td>
+            <td>Límite de peso por paquete</td>
+            <td>No se pueden registrar paquetes de más de 50 kg</td>
+            <td>Registro de paquetes</td>
+            <td>Si supera los 50 kg, se debe dividir en múltiples envíos</td>
+            <td>Bloqueo del registro si supera el peso permitido</td>
+            <td>Autorización especial para carga pesada</td>
+            <td>Normativa interna</td>
+            <td>Alta</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-003</td>
+            <td>Tiempos de entrega estimados</td>
+            <td>Se debe mostrar un tiempo estimado de entrega</td>
+            <td>Seguimiento de envíos</td>
+            <td>Cálculo según distancia y tráfico</td>
+            <td>Actualización del tiempo cada 30 minutos</td>
+            <td>Retrasos por clima o tráfico imprevisto</td>
+            <td>Política de estimación de entregas</td>
+            <td>Media</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-004</td>
+            <td>Validación de datos del destinatario</td>
+            <td>Los datos del destinatario deben ser correctos antes del envío</td>
+            <td>Registro de pedidos</td>
+            <td>Verificación de nombre y teléfono del destinatario</td>
+            <td>Bloqueo del registro si los datos son incorrectos</td>
+            <td>Corrección manual permitida por el operador</td>
+            <td>Política de entregas</td>
+            <td>Alta</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-005</td>
+            <td>Restricción de dimensiones del paquete</td>
+            <td>No se pueden registrar paquetes que superen dimensiones máximas</td>
+            <td>Registro de paquetes</td>
+            <td>Límite de 1.5m x 1m x 1m por paquete</td>
+            <td>Bloqueo del registro si las dimensiones superan los límites</td>
+            <td>Excepción para envíos especiales con autorización</td>
+            <td>Normativa interna</td>
+            <td>Alta</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-006</td>
+            <td>Validación de contenido del paquete</td>
+            <td>No se pueden enviar artículos prohibidos</td>
+            <td>Registro de paquetes</td>
+            <td>Revisión de lista de artículos restringidos</td>
+            <td>Bloqueo del registro si el contenido está prohibido</td>
+            <td>Envíos con permisos especiales en casos excepcionales</td>
+            <td>Normativa interna</td>
+            <td>Alta</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-007</td>
+            <td>Seguridad en la entrega</td>
+            <td>La entrega debe realizarse solo al destinatario autorizado</td>
+            <td>Seguimiento de envíos</td>
+            <td>Verificación de identidad con documento oficial</td>
+            <td>Bloqueo de entrega si la identidad no coincide</td>
+            <td>Autorización previa para terceros</td>
+            <td>Política de entregas</td>
+            <td>Alta</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-008</td>
+            <td>Horarios de entrega permitidos</td>
+            <td>No se pueden programar entregas fuera del horario permitido</td>
+            <td>Seguimiento de envíos</td>
+            <td>Horario de entrega de 7:00 a 21:00</td>
+            <td>Bloqueo del registro si se programa fuera del horario</td>
+            <td>Excepción para entregas urgentes con tarifa especial</td>
+            <td>Política de entregas</td>
+            <td>Media</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-009</td>
+            <td>Registro de intentos de entrega fallidos</td>
+            <td>Se debe registrar cada intento fallido de entrega</td>
+            <td>Seguimiento de envíos</td>
+            <td>Un máximo de tres intentos por pedido</td>
+            <td>Notificación automática al cliente después de cada intento fallido</td>
+            <td>Excepción en zonas de difícil acceso con reprogramación manual</td>
+            <td>Política de entregas</td>
+            <td>Media</td>
+            <td>27/02/2025</td>
+          </tr>
+          <tr>
+            <td>RN-010</td>
+            <td>Seguro de mercancía</td>
+            <td>Los paquetes de alto valor deben contar con seguro obligatorio</td>
+            <td>Registro de paquetes</td>
+            <td>Obligatorio para envíos con valor mayor a 100 mil</td>
+            <td>No se permite el registro sin contratar el seguro</td>
+            <td>Excepción para clientes con contrato especial</td>
+            <td>Política de seguros</td>
+            <td>Alta
+            <td>27/02/2025</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer class="bg-light text-center text-muted py-3 mt-auto">
+        <div class="container">
+            <small>&copy; 2025 GeoPackage. Todos los derechos reservados.</small>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </footer>
+</body>
+
+</html>
